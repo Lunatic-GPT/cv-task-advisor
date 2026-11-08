@@ -1,0 +1,324 @@
+# 计算机视觉顶会主题代表性论文（2012–2025）
+
+> 每篇论文的开源代码核对结果见 [CV_Topics_2016-2025_code_availability.md](CV_Topics_2016-2025_code_availability.md)。
+> 数据集规模与预处理对照见 [CV_Topics_2016-2025_data_profiles.md](CV_Topics_2016-2025_data_profiles.md)。
+
+**参考资源**：[jbhuang0604/awesome-computer-vision](https://github.com/jbhuang0604/awesome-computer-vision)。该仓库主要收录课程、软件、数据集和少量论文索引，论文部分较旧，因此下表按其任务分类思路，补充了 2012–2025 年的奠基性论文与近十年代表作。
+
+**字段说明**
+
+- **年份 / 会议**：以正式发表为准；仅有预印本的工作标注 arXiv。
+- **对应主题**：编号对应 [CV_Topics_2016-2025.md](CV_Topics_2016-2025.md) 中的主题清单。
+- 每个领域 8–16 篇，优先选择被广泛引用、有开源代码、对该方向产生实际影响的工作。
+
+## 1. 图像分类与识别
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2012 | NeurIPS | ImageNet Classification with Deep Convolutional Neural Networks | 1, 193 | AlexNet 在 ImageNet 上大幅领先，开启深度学习视觉时代 |
+| 2016 | CVPR | Deep Residual Learning for Image Recognition | 1, 193 | 残差连接让上百层网络可训练，成为最常用视觉骨干 |
+| 2017 | CVPR | Densely Connected Convolutional Networks | 1, 193 | 密集连接复用特征，参数更省、梯度更好 |
+| 2018 | CVPR | Squeeze-and-Excitation Networks | 1, 197 | 通道注意力让网络按重要性重标定特征 |
+| 2017 | ICML | Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks | 14, 3 | MAML 用少量梯度步快速适配新任务 |
+| 2017 | NeurIPS | Prototypical Networks for Few-shot Learning | 3, 15 | 用类原型做小样本分类，简单而强 |
+| 2021 | ICLR | An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale | 194, 1 | ViT 把图像切成 token，证明 Transformer 可做视觉骨干 |
+| 2021 | ICCV | Swin Transformer: Hierarchical Vision Transformer using Shifted Windows | 194, 1 | 层次化窗口注意力，兼顾精度与效率 |
+| 2022 | CVPR | A ConvNet for the 2020s | 195, 1 | ConvNeXt 用现代训练技巧让 CNN 重回竞争 |
+| 2021 | ICML | Learning Transferable Visual Models From Natural Language Supervision | 163, 6, 29 | CLIP 用图文对比学习实现开放词汇识别 |
+
+## 2. 目标检测
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2015 | NeurIPS | Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks | 18, 19 | 用区域提议网络替代选择性搜索，检测走向端到端 |
+| 2016 | CVPR | You Only Look Once: Unified, Real-Time Object Detection | 18 | 单阶段实时检测的开端 |
+| 2016 | ECCV | SSD: Single Shot MultiBox Detector | 18 | 多尺度单阶段检测，速度精度平衡 |
+| 2017 | ICCV | Focal Loss for Dense Object Detection | 18, 19 | Focal Loss 解决正负样本失衡，RetinaNet 精度超两阶段 |
+| 2018 | CVPR | Cascade R-CNN: Delving into High Quality Object Detection | 18, 40 | 多阶段级联提升高质量框检测 |
+| 2019 | ICCV | FCOS: Fully Convolutional One-Stage Object Detection | 18, 19 | 无锚框检测，逐像素预测 |
+| 2020 | ECCV | End-to-End Object Detection with Transformers | 39, 19 | DETR 用集合预测去掉 NMS 和锚框 |
+| 2021 | ICLR | Deformable DETR: Deformable Transformers for End-to-End Object Detection | 39 | 可变形注意力加速收敛、提升小目标 |
+| 2021 | CVPR | YOLOX: Exceeding YOLO Series in 2021 | 18, 40 | 无锚框 + 解耦头，YOLO 系列现代化 |
+| 2023 | ICLR | DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection | 39 | 去噪训练与混合查询，DETR 系列强基线 |
+| 2022 | ECCV | Simple Open-Vocabulary Object Detection with Vision Transformers | 29 | OWL-ViT 用图文预训练做开放词汇检测 |
+| 2024 | ECCV | Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection | 29 | 文本引导的开放集检测，支持任意类别 |
+| 2018 | CVPR | VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection | 20, 21 | 点云体素化 + 3D 检测端到端 |
+| 2019 | CVPR | PointPillars: Fast Encoders for Object Detection from Point Clouds | 20, 21 | 点云柱状编码，兼顾速度与精度 |
+| 2021 | CVPR | CenterPoint: Center-based 3D Object Detection and Tracking | 20, 24 | 中心点表示统一检测与跟踪 |
+| 2022 | ECCV | BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers | 22, 23 | 多相机时空 Transformer 构建 BEV 感知 |
+
+## 3. 图像分割
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2015 | CVPR | Fully Convolutional Networks for Semantic Segmentation | 41 | FCN 首次实现端到端像素级分割 |
+| 2015 | MICCAI | U-Net: Convolutional Networks for Biomedical Image Segmentation | 41, 58 | 编码器-解码器加跳跃连接，医学分割基石 |
+| 2018 | ECCV | Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation | 41 | DeepLabv3+ 结合空洞卷积与解码器 |
+| 2017 | ICCV | Mask R-CNN | 42 | 检测与分割统一框架，实例分割里程碑 |
+| 2019 | CVPR | Panoptic Feature Pyramid Networks | 43 | 统一语义与实例分割的全景分割基线 |
+| 2020 | CVPR | PointRend: Image Segmentation as Rendering | 41, 42 | 用点采样细化分割边缘 |
+| 2021 | NeurIPS | SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers | 41 | 轻量 Transformer 分割，简单高效 |
+| 2022 | CVPR | Masked-attention Mask Transformer for Universal Image Segmentation | 43, 52 | Mask2Former 统一语义、实例、全景分割 |
+| 2023 | ICCV | Segment Anything | 62, 45 | SAM 用十亿级掩码实现可提示通用分割 |
+| 2024 | arXiv | SAM 2: Segment Anything in Images and Videos | 47, 62 | 把可提示分割扩展到视频 |
+| 2021 | Nature Methods | nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation | 58, 245 | 自动配置的医学分割强基线 |
+
+## 4. 跟踪与视频理解
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2016 | ICIP | Simple Online and Realtime Tracking | 66 | SORT 用卡尔曼滤波加匈牙利匹配做实时多目标跟踪 |
+| 2017 | ICIP | Simple Online and Realtime Tracking with a Deep Association Metric | 66 | DeepSORT 加入外观特征，减少 ID 切换 |
+| 2022 | ECCV | ByteTrack: Multi-Object Tracking by Associating Every Detection Box | 66 | 利用低分框二次关联，简单且强 |
+| 2023 | CVPR | Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking | 66 | 以观测为中心改进 SORT 的遮挡与非线性运动 |
+| 2016 | ECCV | Fully-Convolutional Siamese Networks for Object Tracking | 65 | SiamFC 用孪生网络做模板匹配跟踪 |
+| 2019 | CVPR | SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks | 65 | 深度孪生网络加区域提议，跟踪性能大幅提升 |
+| 2022 | ECCV | Joint Feature Learning and Relation Modeling for Tracking: A One-Stream Framework | 65 | OSTrack 一体化特征学习与关系建模 |
+| 2017 | CVPR | Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset | 69 | I3D 双流膨胀卷积，动作识别强基线 |
+| 2019 | ICCV | SlowFast Networks for Video Recognition | 69 | 双路径快慢帧率建模动作 |
+| 2021 | ICML | Is Space-Time Attention All You Need for Video Understanding? | 69, 83 | TimeSformer 用纯时空注意力做视频理解 |
+| 2022 | NeurIPS | VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training | 83, 189 | 视频掩码自监督，数据效率高 |
+| 2022 | CVPR | Video Swin Transformer | 69, 83 | 把 Swin 扩展到视频时空建模 |
+| 2022 | NeurIPS | Video Diffusion Models | 81 | 扩散模型用于视频生成的开创工作 |
+| 2024 | arXiv | Video Generation Models as World Simulators | 81, 149 | Sora 技术报告，展示长视频生成能力 |
+
+## 5. 人脸、人体与生物特征
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2015 | CVPR | FaceNet: A Unified Embedding for Face Recognition and Clustering | 86 | 三元组损失学习人脸嵌入，统一识别与聚类 |
+| 2018 | CVPR | CosFace: Large Margin Cosine Loss for Deep Face Recognition | 86 | 余弦间隔损失提升人脸判别力 |
+| 2019 | CVPR | ArcFace: Additive Angular Margin Loss for Deep Face Recognition | 86 | 角度间隔损失，成为人脸识别标准基线 |
+| 2020 | CVPR | RetinaFace: Single-stage Dense Face Localisation in the Wild | 38, 86 | 单阶段人脸检测加五点关键点 |
+| 2021 | ICCV | DECA: Detailed Expression Capture and Animation | 88, 95 | 从单图重建可动画的细节化三维人脸 |
+| 2019 | CVPR | A Style-Based Generator Architecture for Generative Adversarial Networks | 89 | StyleGAN 风格解耦，人脸生成质变 |
+| 2020 | CVPR | Analyzing and Improving the Image Quality of StyleGAN | 89 | StyleGAN2 修复伪影，质量再提升 |
+| 2019 | ICCV | FaceForensics++: Learning to Detect Manipulated Facial Images | 90 | 大规模换脸检测基准与方法 |
+| 2017 | CVPR | Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields | 94 | OpenPose 实时多人姿态估计 |
+| 2019 | CVPR | Deep High-Resolution Representation Learning for Visual Recognition | 94 | HRNet 保持高分辨率特征，姿态估计强基线 |
+| 2022 | NeurIPS | ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation | 94 | 用 ViT 做姿态估计，简洁且强 |
+| 2015 | SIGGRAPH | SMPL: A Skinned Multi-Person Linear Model | 95 | 参数化人体模型，三维人体重建基础 |
+| 2019 | CVPR | Expressive Body Capture: 3D Hands, Face, and Body from a Single Image | 95 | SMPL-X 统一身体、手、脸参数化模型 |
+| 2019 | AAAI | GaitSet: Regarding Gait as a Set for Cross-View Gait Recognition | 97 | 把步态当集合，跨视角识别 |
+
+## 6. 3D视觉与几何
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2016 | CVPR | Structure-from-Motion Revisited | 105, 113 | COLMAP 开源 SfM 管线，成为三维重建标准工具 |
+| 2018 | ECCV | MVSNet: Depth Inference for Unstructured Multi-view Stereo | 104 | 端到端多视图立体深度推断 |
+| 2017 | CVPR | PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation | 111 | 直接处理无序点云的开创工作 |
+| 2017 | NeurIPS | PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space | 111 | 层次化点云特征学习 |
+| 2019 | CVPR | Occupancy Networks: Learning 3D Reconstruction in Function Space | 116 | 用隐式占用函数表示三维形状 |
+| 2020 | ECCV | NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis | 117 | 神经辐射场，新视角合成里程碑 |
+| 2021 | ICCV | Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields | 117 | 多尺度锥体采样解决 NeRF 混叠 |
+| 2022 | SIGGRAPH | Instant Neural Graphics Primitives with a Multiresolution Hash Encoding | 117 | 哈希编码把 NeRF 训练从小时降到秒级 |
+| 2023 | SIGGRAPH | 3D Gaussian Splatting for Real-Time Radiance Field Rendering | 118 | 高斯泼溅实现实时高质量渲染 |
+| 2023 | ICLR | DreamFusion: Text-to-3D using 2D Diffusion | 122, 123 | 用二维扩散先验蒸馏生成三维 |
+| 2023 | CVPR | Magic3D: High-Resolution Text-to-3D Content Creation | 122, 123 | 两阶段文本到三维，分辨率与质量提升 |
+| 2023 | ICCV | LRM: Large Reconstruction Model for Single Image to 3D | 115, 123 | 大模型前馈式单图到三维 |
+| 2024 | CVPR | DUSt3R: Geometric 3D Vision Made Easy | 115, 114 | 无相机标定的稠密三维重建 |
+| 2025 | CVPR | VGGT: Visual Geometry Grounded Transformer | 115 | 前馈 Transformer 一次输出相机、深度、点云 |
+
+## 7. 生成模型
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2014 | NeurIPS | Generative Adversarial Networks | 134 | GAN 开创对抗生成范式 |
+| 2016 | ICLR | Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks | 134 | DCGAN 让 GAN 训练稳定、可学习特征 |
+| 2017 | NeurIPS | Wasserstein Generative Adversarial Networks | 134 | WGAN 用 Wasserstein 距离改善训练稳定性 |
+| 2014 | ICLR | Auto-Encoding Variational Bayes | 135 | VAE 用变分推断做概率生成 |
+| 2020 | NeurIPS | Denoising Diffusion Probabilistic Models | 136 | DDPM 让扩散模型生成质量大幅提升 |
+| 2021 | ICLR | Denoising Diffusion Implicit Models | 137 | DDIM 减少采样步数、加速生成 |
+| 2022 | CVPR | High-Resolution Image Synthesis with Latent Diffusion Models | 141 | 潜空间扩散，Stable Diffusion 的基础 |
+| 2022 | NeurIPS | Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding | 141 | Imagen 展示大语言模型加扩散的文生图能力 |
+| 2022 | NeurIPS | Hierarchical Text-Conditional Image Generation with CLIP Latents | 141 | DALL-E 2 用 CLIP 潜变量做文生图 |
+| 2023 | ICCV | Adding Conditional Control to Text-to-Image Diffusion Models | 144 | ControlNet 用额外条件精确控制生成 |
+| 2023 | CVPR | DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation | 145 | 少量照片个性化生成特定主体 |
+| 2022 | ICLR | LoRA: Low-Rank Adaptation of Large Language Models | 181 | 低秩适配，参数高效微调主流方法 |
+| 2023 | ICCV | Scalable Diffusion Models with Transformers | 136, 139 | DiT 用 Transformer 替代 U-Net 做扩散骨干 |
+| 2023 | ICLR | Flow Matching for Generative Modeling | 138 | 流匹配，连续归一化流的高效训练 |
+
+## 8. 视觉-语言与多模态
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2015 | CVPR | Show and Tell: A Neural Image Caption Generator | 155 | CNN 加 RNN 的图像描述经典框架 |
+| 2015 | ICML | Show, Attend and Tell: Neural Image Caption Generation with Visual Attention | 155 | 引入视觉注意力，描述更准 |
+| 2015 | ICCV | VQA: Visual Question Answering | 156 | 提出视觉问答任务与数据集 |
+| 2018 | CVPR | Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering | 156 | 自底向上区域特征加自顶向下注意力 |
+| 2019 | NeurIPS | ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks | 164 | 早期视觉语言联合预训练 |
+| 2019 | EMNLP | LXMERT: Learning Cross-Modality Encoder Representations from Transformers | 164 | 跨模态编码器预训练 |
+| 2020 | ECCV | UNITER: UNiversal Image-TExt Representation Learning | 164 | 统一图文表示，覆盖多任务 |
+| 2021 | ICML | Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision | 163 | ALIGN 用噪声图文对扩大预训练规模 |
+| 2022 | CVPR | BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation | 155, 164 | 统一理解与生成，bootstrapping 清洗数据 |
+| 2023 | ICML | BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models | 164 | Q-Former 连接冻结视觉编码器与语言模型 |
+| 2022 | NeurIPS | Flamingo: a Visual Language Model for Few-Shot Learning | 165 | 少样本视觉语言大模型 |
+| 2023 | NeurIPS | Visual Instruction Tuning | 165, 166 | LLaVA 用视觉指令微调构建多模态助手 |
+| 2023 | ICML | MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models | 165 | 轻量连接视觉编码器与语言模型 |
+| 2023 | NeurIPS | InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning | 166 | 指令微调的通用视觉语言模型 |
+| 2022 | CVPR | Grounded Language-Image Pre-training | 161 | GLIP 统一检测与视觉定位 |
+
+## 9. 自监督与基础模型
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2020 | ICML | A Simple Framework for Contrastive Learning of Visual Representations | 186, 187 | SimCLR 简化对比学习，强数据增强是关键 |
+| 2020 | CVPR | Momentum Contrast for Unsupervised Visual Representation Learning | 186, 187 | MoCo 用动量编码器加队列做对比学习 |
+| 2020 | NeurIPS | Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning | 186 | BYOL 不用负样本的自监督 |
+| 2020 | NeurIPS | Unsupervised Learning of Visual Features by Contrasting Cluster Assignments | 190 | SwAV 聚类对比，无需大量负样本 |
+| 2021 | ICCV | Emerging Properties in Self-Supervised Vision Transformers | 190 | DINO 自蒸馏，ViT 特征具备语义分割能力 |
+| 2024 | TMLR | DINOv2: Learning Robust Visual Features without Supervision | 192 | 大规模自监督通用视觉特征 |
+| 2022 | CVPR | Masked Autoencoders Are Scalable Vision Learners | 188 | MAE 高比例掩码，ViT 自监督预训练 |
+| 2022 | ICLR | BEiT: BERT Pre-Training of Image Transformers | 188 | 用离散视觉 token 做掩码预训练 |
+| 2024 | COLM | Mamba: Linear-Time Sequence Modeling with Selective State Spaces | 196 | 选择性状态空间，线性复杂度序列建模 |
+| 2024 | ICML | Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model | 196 | 把 Mamba 用于视觉骨干 |
+## 10. 低层视觉与图像复原
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2014 | ECCV | Learning a Deep Convolutional Network for Image Super-Resolution | 215 | SRCNN 首次用 CNN 做超分 |
+| 2017 | CVPR | Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network | 215, 232 | SRGAN 用对抗损失提升感知质量 |
+| 2018 | ECCV | ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks | 215, 232 | 改进生成器与感知损失，纹理更真实 |
+| 2017 | IEEE TIP | Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising | 211 | DnCNN 残差学习做盲去噪 |
+| 2021 | ICCV | SwinIR: Image Restoration Using Swin Transformer | 216 | Transformer 用于超分、去噪、压缩伪影去除 |
+| 2021 | ICCV | Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data | 215 | 合成退化训练真实场景盲超分 |
+| 2022 | CVPR | Restormer: Efficient Transformer for High-Resolution Image Restoration | 216 | 高效通道注意力，高分辨率复原 |
+| 2022 | ECCV | Simple Baselines for Image Restoration | 212, 216 | NAFNet 用简单非线性激活网络刷新复原基线 |
+| 2017 | SIGGRAPH | Deep Bilateral Learning for Real-Time Image Enhancement | 221 | HDRNet 实时图像增强 |
+| 2017 | ICLR | End-to-End Optimized Image Compression | 219 | 神经网络端到端图像压缩开端 |
+| 2020 | NeurIPS | High-Fidelity Generative Image Compression | 219, 232 | 生成式感知压缩，低码率高画质 |
+| 2018 | IEEE TIP | NIMA: Neural Image Assessment | 220 | 用网络预测图像美学与质量分数 |
+| 2017 | ICCV | All-in-One Network for Dehazing and Beyond | 213 | AOD-Net 轻量端到端去雾 |
+| 2020 | AAAI | FFA-Net: Feature Fusion Attention Network for Single Image Dehazing | 213 | 特征融合注意力去雾 |
+| 2021 | CVPR | Multi-Stage Progressive Image Restoration | 213, 216 | MPRNet 多阶段渐进复原，兼顾去雨去噪 |
+
+## 11. 具身智能、机器人与自动驾驶
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2018 | ICLR | Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World | 238 | 域随机化缩小仿真到现实差距 |
+| 2022 | CoRL | Do As I Can, Not As I Say: Grounding Language in Robotic Affordances | 237 | SayCan 用语言模型做机器人任务规划 |
+| 2023 | ICML | PaLM-E: An Embodied Multimodal Language Model | 233, 236 | 具身多模态语言模型 |
+| 2023 | RSS | RT-1: Robotics Transformer for Real-World Control at Scale | 233 | 大规模机器人 Transformer 控制 |
+| 2023 | CoRL | RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control | 233 | 把视觉语言模型知识迁移到机器人动作 |
+| 2023 | RSS | Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | 234 | 用扩散模型生成机器人动作轨迹 |
+| 2023 | RSS | Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware | 234 | ACT 与 ALOHA 实现低成本双臂精细操作 |
+| 2024 | CoRL | OpenVLA: An Open-Source Vision-Language-Action Model | 233 | 开源 VLA 模型，推动社区复现 |
+| 2021 | CVPR | TransFuser: Imitation with Transformer-Based Sensor Fusion for Autonomous Driving | 240 | Transformer 融合多传感器做端到端驾驶 |
+| 2023 | CVPR | Planning-oriented Autonomous Driving | 240 | UniAD 以规划为导向统一自动驾驶任务 |
+| 2023 | ICCV | VAD: Vectorized Scene Representation for Efficient Autonomous Driving | 240 | 矢量化场景表示，提升端到端驾驶效率 |
+| 2020 | ICLR | Dream to Control: Learning Behaviors by Latent Imagination | 150, 241 | Dreamer 在潜空间想象中学习控制 |
+| 2025 | CVPR | Navigation World Models | 241 | 用世界模型预测导航未来画面 |
+| 2024 | arXiv | π0: A Vision-Language-Action Flow Model for General Robot Control | 233, 328 | 流匹配 VLA，通用机器人控制 |
+
+## 12. 医学与生物视觉
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2016 | 3DV | V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation | 245 | 三维医学图像分割经典网络 |
+| 2021 | Nature Methods | nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation | 245 | 自动配置的医学分割强基线 |
+| 2021 | arXiv | TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation | 245 | Transformer 加 U-Net 做医学分割 |
+| 2022 | CVPR | Self-Supervised Pre-Training of Swin Transformers for 3D Medical Image Analysis | 245, 248 | Swin UNETR 自监督预训练，三维医学分析 |
+| 2024 | Nature Communications | Segment Anything in Medical Images | 245, 252 | MedSAM 把可提示分割用于医学影像 |
+| 2017 | CVPR | CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning | 250 | 胸片肺炎检测达到放射科医生水平 |
+| 2022 | EMNLP | MedCLIP: Contrastive Learning from Unpaired Medical Images and Text | 252, 255 | 医学图文对比学习，无需严格配对 |
+| 2023 | NEJM AI | BiomedCLIP: a multimodal biomedical foundation model pretrained on fifteen million images | 252 | 大规模生物医学图文基础模型 |
+| 2024 | Nature Medicine | Towards a General-Purpose Foundation Model for Computational Pathology | 248 | UNI 病理通用基础模型 |
+| 2024 | Nature Medicine | A foundation model for clinical-grade computational pathology and rare cancers detection | 248 | Virchow 病理基础模型，罕见癌检测 |
+
+## 13. 遥感、农业与地球观测
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2018 | CVPR | DOTA: A Large-scale Dataset for Object Detection in Aerial Images | 256 | 航拍旋转目标检测基准 |
+| 2018 | CVPR | xView: Objects in Context in Overhead Imagery | 256 | 大幅面遥感目标检测挑战赛数据集 |
+| 2021 | NeurIPS | LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation | 257 | 土地利用域适应分割数据集 |
+| 2021 | IEEE TGRS | Remote Sensing Image Change Detection with Transformers | 258 | BIT 用 Transformer 做变化检测 |
+| 2022 | IGARSS | A Transformer-Based Siamese Network for Change Detection | 258 | ChangeFormer 孪生 Transformer 变化检测 |
+| 2022 | NeurIPS | SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery | 261 | 多光谱时序卫星图自监督预训练 |
+| 2023 | ICCV | Scale-MAE: A Scale-Aware Masked Autoencoder for Multiscale Geospatial Representation Learning | 257, 261 | 尺度感知的遥感自监督 |
+| 2023 | CVPR | RingMo: A Remote Sensing Foundation Model with Masked Image Modeling | 256 | 遥感基础模型 |
+| 2024 | CVPR | SkySense: A Multi-Modal Remote Sensing Foundation Model Towards Universal Interpretation for Earth Observation Imagery | 256, 257 | 多模态遥感通用基础模型 |
+
+## 14. 工业、文档与其他应用
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2017 | IEEE TPAMI | An End-to-End Trainable Neural Network for Image-Based Sequence Recognition and Its Application to Scene Text Recognition | 174 | CRNN 端到端场景文字识别经典 |
+| 2020 | AAAI | Real-Time Scene Text Detection with Differentiable Binarization | 174 | DBNet 可微二值化，实时文字检测 |
+| 2021 | AAAI | TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models | 174, 271 | 预训练 Transformer 做 OCR |
+| 2020 | KDD | LayoutLM: Pre-training of Text and Layout for Document Image Understanding | 173, 270 | 联合文本与版面预训练 |
+| 2022 | ACM MM | LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking | 173, 270 | 统一文本与图像掩码的文档 AI |
+| 2022 | ECCV | OCR-free Document Understanding Transformer | 173, 270 | Donut 免 OCR 端到端文档理解 |
+| 2022 | ECCV | PubTables-1M: Towards Comprehensive Table Extraction from Unstructured Documents | 270 | 表格结构识别大规模数据集与方法 |
+| 2019 | CVPR | MVTec AD: A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection | 36, 267 | 工业异常检测标准基准 |
+| 2022 | CVPR | Towards Total Recall in Industrial Anomaly Detection | 36, 267 | PatchCore 用预训练特征做工业异常检测 |
+| 2023 | WACV | EfficientAD: Accurate Visual Anomaly Detection at Millisecond-Level Latencies | 36, 267 | 毫秒级工业异常检测 |
+
+## 15. 高效计算与部署
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2017 | ICLR | SqueezeNet: AlexNet-level Accuracy with 50x Fewer Parameters and <0.5MB Model Size | 283 | 小模型设计早期代表 |
+| 2017 | CVPR | MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications | 283, 288 | 深度可分离卷积，移动端主力 |
+| 2018 | CVPR | MobileNetV2: Inverted Residuals and Linear Bottlenecks | 283 | 倒残差结构，速度精度更优 |
+| 2019 | ICCV | Searching for MobileNetV3 | 283, 289 | 神经架构搜索加手工设计，移动端新基线 |
+| 2018 | ECCV | ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design | 283 | 从实际速度出发的高效网络设计 |
+| 2019 | ICML | EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | 283 | 复合缩放，系统化放大网络 |
+| 2016 | ICLR | Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding | 280, 281 | 剪枝、量化、编码的经典压缩管线 |
+| 2019 | ICLR | The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks | 280 | 稀疏子网络可独立训练，影响剪枝研究 |
+| 2018 | CVPR | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference | 281 | 整数运算量化训练，移动端部署基础 |
+| 2019 | ICLR | DARTS: Differentiable Architecture Search | 201 | 可微架构搜索，大幅降低搜索成本 |
+| 2016 | ECCV | BranchyNet: Fast Inference via Early Exiting from Deep Neural Networks | 285 | 早退机制，动态减少推理计算 |
+
+## 16. 鲁棒性、安全与可信
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2015 | ICLR | Explaining and Harnessing Adversarial Examples | 291 | FGSM 揭示对抗样本，提出快速攻击 |
+| 2018 | ICLR | Towards Deep Learning Models Resistant to Adversarial Attacks | 291, 292 | PGD 攻击与对抗训练强基线 |
+| 2019 | ICML | Theoretically Principled Trade-off between Robustness and Accuracy | 292 | TRADES 权衡鲁棒性与精度 |
+| 2017 | arXiv | BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain | 293 | 后门攻击开创工作 |
+| 2019 | IEEE S&P | Neural Cleanse: Identifying and Mitigating Backdoor Attacks in Neural Networks | 293 | 触发器逆向检测后门 |
+| 2017 | IEEE S&P | Membership Inference Attacks Against Machine Learning Models | 294 | 成员推断攻击，揭示隐私泄露 |
+| 2021 | IEEE S&P | Machine Unlearning | 296 | 提出机器遗忘问题与精确遗忘方法 |
+| 2017 | ICCV | Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization | 297 | 梯度热力图解释模型决策 |
+| 2016 | KDD | "Why Should I Trust You?": Explaining the Predictions of Any Classifier | 297 | LIME 局部可解释解释 |
+| 2017 | NeurIPS | A Unified Approach to Interpreting Model Predictions | 297 | SHAP 统一特征归因 |
+| 2018 | ICLR | Enhancing the Reliability of Out-of-Distribution Image Detection in Neural Networks | 300 | ODIN 用温度缩放与输入扰动检测 OOD |
+| 2020 | NeurIPS | Energy-based Out-of-Distribution Detection | 300 | 用能量分数做 OOD 检测 |
+| 2017 | ICML | On Calibration of Modern Neural Networks | 299 | 揭示深度网络过度自信，提出温度校准 |
+| 2019 | CVPRW | Does Object Recognition Work for Everyone? | 302 | 揭示视觉模型跨人群的公平性差异 |
+| 2023 | CVPR | Towards Universal Fake Image Detectors that Generalize Across Generative Models | 304 | 跨生成模型的通用伪造检测 |
+
+## 17. 数据集、基准与评测
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2009 | CVPR | ImageNet: A Large-Scale Hierarchical Image Database | 308, 310 | 大规模图像分类数据集，推动深度学习 |
+| 2014 | ECCV | Microsoft COCO: Common Objects in Context | 310, 314 | 检测、分割、描述的多任务基准 |
+| 2017 | IJCV | Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations | 126, 310 | 密集场景图与图文标注 |
+| 2017 | CVPR | Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering | 156, 310 | VQA v2 减少语言先验，强调视觉理解 |
+| 2019 | CVPR | LVIS: A Dataset for Large Vocabulary Instance Segmentation | 313 | 长尾大规模实例分割数据集 |
+| 2019 | ICCV | Objects365: A Large-Scale, High-Quality Dataset for Object Detection | 310 | 大规模检测数据集 |
+| 2016 | CVPR | The Cityscapes Dataset for Semantic Urban Scene Understanding | 239, 314 | 城市街景分割与驾驶基准 |
+| 2020 | CVPR | nuScenes: A Multimodal Dataset for Autonomous Driving | 239, 315 | 多传感器自动驾驶数据集 |
+| 2020 | CVPR | Scalability in Perception for Autonomous Driving: Waymo Open Dataset | 315 | 大规模自动驾驶感知基准 |
+| 2023 | NeurIPS | MMBench: Is Your Multi-modal Model an All-Around Player? | 316 | 多模态能力系统评测 |
+| 2023 | arXiv | MME: A Comprehensive Evaluation Benchmark for Multimodal Large Language Models | 316 | 多模态大模型综合评测 |
+| 2023 | ICCV | SEED-Bench: Benchmarking Multimodal LLMs with Generative Comprehension | 316 | 生成式多模态理解评测 |
+| 2024 | CVPR | Video-MME: The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video Analysis | 314, 316 | 视频多模态大模型评测 |
+
+## 18. 交叉与新兴方向
+
+| 年份 | 会议/期刊 | 论文 | 对应主题 | 一句话贡献 |
+|---|---|---|---|---|
+| 2018 | NeurIPS | Recurrent World Models Facilitate Policy Evolution | 150 | 世界模型用于强化学习决策 |
+| 2021 | ICML | Learning Transferable Visual Models From Natural Language Supervision | 163, 319 | CLIP 打通视觉与语言，开放词汇基础 |
+| 2022 | NeurIPS | Flamingo: a Visual Language Model for Few-Shot Learning | 165, 319 | 多模态大模型少样本学习 |
+| 2023 | arXiv | The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision) | 319, 320 | GPT-4V 能力与局限的系统评测 |
+| 2023 | ICLR | DreamFusion: Text-to-3D using 2D Diffusion | 122, 332 | 二维扩散先验驱动三维生成 |
+| 2024 | ICML | Generative Interactive Environments | 150, 332 | Genie 从视频学习可交互生成环境 |
+| 2024 | arXiv | π0: A Vision-Language-Action Flow Model for General Robot Control | 233, 328 | 通用机器人 VLA 模型 |
+| 2025 | arXiv | Cosmos World Foundation Model Platform for Physical AI | 150, 332 | 面向物理 AI 的世界基础模型平台 |
